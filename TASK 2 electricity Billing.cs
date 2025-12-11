@@ -1,4 +1,31 @@
-﻿using System;
+// Smart Electricity Billing & Summary System (EnergyTech)
+// Build a console application that computes monthly electricity bills for multiple consumers and produces a month-end summary report.
+// Functional requirements:
+// 1.	Read the number of consumers N.
+// 2.	For each consumer read:
+// o	ConsumerID (string)
+// o	UnitsConsumed (integer)
+// o	ConnectionType (code: 1 = Domestic, 2 = Commercial)
+// 3.	Compute the base charge per consumer using the following slabs:
+// o	Domestic: 0–100 → ₹1.50/unit; 101–300 → ₹2.50/unit; >300 → ₹4.00/unit
+// o	Commercial: 0–200 → ₹5.00/unit; 201–500 → ₹6.50/unit; >500 → ₹8.00/unit
+// 4.	Apply additional rules:
+// o	Environmental surcharge = 3% of base charge
+// o	If units > 500, add penalty ₹200
+// o	If total after surcharge & penalty > ₹2000, apply discount 5% on the total
+// 5.	For each consumer output:
+// o	ConsumerID, ConnectionType (human readable), UnitsConsumed, BaseCharge, Surcharge, Penalty (if any), Discount (if any), FinalBill
+// 6.	After processing all consumers, print a summary:
+// o	Total consumers processed
+// o	Total revenue (sum of final bills)
+// o	Highest single bill amount and corresponding ConsumerID
+// o	Count of Domestic vs Commercial consumers
+
+
+
+
+
+using System;
 
 class Program
 {
@@ -69,3 +96,4 @@ class Program
         Console.WriteLine("Domestic: " + dom + " Commercial: " + com);
     }
 }
+
